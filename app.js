@@ -1,107 +1,38 @@
-var e11 = 1;
-var e21 = 4;
-var e31 = 3;
+<!DOCTYPE html>
+<html lang=“ja”>
+<head>
+    <meta http-equiv="content-language" content="ja">
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <title>スロット</title>
+    </style>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <center>
+        <h1 id="slot">スロット！</h1>
+        <h3><span id="money"></span>円</h3>
+        <img id="e1" src="egara-1.png" width="130" height="130" onclick="a()">
+        <img id="e2" src="egara-1.png" width="130" height="130">
+        <img id="e3" src="egara-1.png" width="130" height="130">
+        <br />
+        <input id="js-btn1" type="button" class="btn btn-primary btn-lg" onclick="a()">
+        <input id="js-btn2" type="button" class="btn btn-primary btn-lg" onclick="b()">
+        <input id="js-btn3" type="button" class="btn btn-primary btn-lg" onclick="c()">
+        <br />
+        <input id="js-startBtn" type="button" class="btn btn-danger" onclick="startSlot()" value="もう一回">
 
-document.getElementById("ome").style.display = "none";
+        <p id="ome">おめでとう！</p>
 
-var count = 0;
+    </center>
+        
 
-
-
-
-
-//egara1
-
-function e1sys(){
-e11 ++;
-document.getElementById("e1").src = "egara-"+e11+".png";
-if(e11 == 6){
-	e11 = 0;
-};
-};
-
-
-e1Timer=setInterval(function(){
-e1sys()
-} , 100);
-
-//egara2
-function e2sys(){
-e21 ++;
-document.getElementById("e2").src = "egara-"+e21+".png";
-if(e21 == 6){
-	e21 = 0;
-};
-};
-
-
-e2Timer=setInterval(function(){
-e2sys()
-} , 100);
-
-
-//egara3
-function e3sys(){
-e31 ++;
-document.getElementById("e3").src = "egara-"+e31+".png";
-if(e31 == 6){
-	e31 = 0;
-};
-};
-
-
-e3Timer=setInterval(function(){
-e3sys()
-} , 100);
+   
 
 
 
-function a(){
-count++;
-clearInterval(e1Timer)
 
-if(count > 2){
-if(e11 == e21){
-	if(e21 == e31){
-		document.getElementById("ome").style.display = "block";
-	}
-
-};
-};
-};
-	
-function b(){
-count++;
-clearInterval(e2Timer)
-
-if(count > 2){
-if(e11 == e21){
-	if(e21 == e31){
-		document.getElementById("ome").style.display = "block";
-	}
-
-};
-};
-};
-	
-function c(){
-count++;
-clearInterval(e3Timer)
-
-if(count > 2){
-if(e11 == e21){
-	if(e21 == e31){
-		document.getElementById("ome").style.display = "block";
-	}
-
-};
-};
-
-
-};
-	
-
-function retry(){
-	document.location.reload()
-
-}
+    <script src="app.js"></script>
+</body>
+</html>
